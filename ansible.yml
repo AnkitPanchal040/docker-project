@@ -1,0 +1,10 @@
+- hosts: all
+  tasks: 
+    - name: stop container
+      command: docker container stop my-container
+    - name: remove container
+      command: docker container rm my-container
+    - name: stop docker image
+      command: docker image rmi ankitpanchal040/docker-project
+    - name: create new container
+      command: docker container run -itd --name my-container -p 8000:80 ankitpanchal040/docker-project
