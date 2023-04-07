@@ -1,0 +1,4 @@
+- hosts: all
+  tasks: 
+    - name: create new container
+      command: docker container run -itd --name my-container -p 8000:80 ankitpanchal040/docker-project
